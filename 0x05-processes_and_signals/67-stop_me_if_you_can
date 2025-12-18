@@ -1,5 +1,4 @@
-cat > 67-stop_me_if_you_can << 'EOF'
 #!/usr/bin/env bash
-# This script stops the 7-highlander process
-kill "$(pgrep -f 7-highlander)"
-EOF
+# Sends SIGTERM to the 7-highlander process
+
+pkill -f 7-highlander
