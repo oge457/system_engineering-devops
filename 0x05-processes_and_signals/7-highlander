@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Displays a message endlessly and ignores SIGTERM by printing a message
+# Displays a message endlessly and handles SIGTERM without exiting
 
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'printf "I am invincible!!!\n"' SIGTERM
 
 while true
 do
